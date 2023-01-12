@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Esempio di lavagna con Post It</title>
+<meta name="description" content="Creazione di una lavagna con post animati al rollover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="postit.css">
+
+<style>
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lavagna{
+        background-color: lightgrey;
+        width:50%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height:250px;
+        padding:20px;
+        margin-top:30px
+    }
+    .lavagna div{
+        width: 100px;
+        height: 100px;
+        margin: 12px;
+        box-shadow: 0.5px 0.5px rgb(87, 69, 69);
+    }
+    .lavagna div:nth-of-type(odd){
+        background-color: burlywood;
+        transform: rotate(20deg);
+    }
+    .lavagna div:nth-of-type(even){
+        background-color: aqua;
+        transform: rotate(-32deg);
+    }
+    .lavagna div:hover{
+        box-shadow: 2px 2px rgb(10, 10, 10);
+        transform: scale(1.5);
+        z-index: 1;
+    }
+    #card1{
+        animation: postit1 10s linear;
+    }
+    #card2{
+        animation: postit1 8s linear;
+    }
+    #card3{
+        animation: postit1 6s linear;
+    }
+    #card4{
+        animation: postit1 4s linear;
+    }
+    @keyframes postit1{
+        0%{
+            transform: translate(-100vh);
+        }
+        50%{
+            transform: rotate(-32deg);
+        }
+        100%{
+            transform: translate(0vh);
+        }
+    }
+
+    #card5{
+        animation: postit2 3s linear;
+    }
+    #card6{
+        animation: postit2 5s linear;
+    }
+    #card7{
+        animation: postit2 7s linear;
+    }
+    #card8{
+        animation: postit2 9s linear;
+    }
+
+    @keyframes postit2{
+        0%{
+            transform: translate(100vh);
+        }
+        50%{
+            transform: rotate(32deg);
+        }
+        100%{
+            transform: translate(0vh);
+        }
+    }
+    
+    
+</style>
+
+</head>
+
+
+<body>
+    <main>
+        <div class="lavagna">
+            <div id="card1">
+                <h3>Task 1</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card2">
+                <h3>Task 2</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card3">
+                <h3>Task 3</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card4">
+                <h3>Task 4</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card5">
+                <h3>Task 5</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card6">
+                <h3>Task 6</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card7">
+                <h3>Task 7</h3>
+                <p>Creare i post it</p>
+            </div>
+            <div id="card8">
+                <h3>Task 8</h3>
+                <p>Creare i post it</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
